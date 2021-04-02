@@ -12,4 +12,11 @@ where   a - list of AR coefficients
         n - the size of the sample generated
         mu and sigm - parameters of normal distribution
 
-# Examples
+# Example
+For ARMA(2,3) process you can use
+
+```KF_ARMA_visualisator([0.3, 0.6], [0.3,0.2,0.1], 200)```
+
+The result will be like this
+
+<img src = "https://github.com/Dranikf/ARMA_generator/blob/main/examples/Figure_1.png" height = "600">
