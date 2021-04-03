@@ -23,17 +23,17 @@ def KF_ARMA_generator(a, b, n, mu = 0, sigm=0.5):
         y = e[i]
         for j,ta in enumerate(a):
             if (j+1) <= len(result):
-                y += result[i-(j+1)]*a[j]
+                y += result[i-(j+1)]*ta
 
         for j,tb in enumerate(b):
             if (j+1) <= len(result):
-                y += e[i-(j+1)]*b[j]
+                y += e[i-(j+1)]*tb
                 
         result.append(y)
 
     return result
 
-def KF_ARMA_visualisator(a, b, n, mu = 0, sigm=0.5):
+def KF_ARMA_visualisator(a, b, n, mu = 0, sigm=0.5, lags = 20):
     '''function for generation and representing ARMA process with ACF and PACF'''
     # errors with normal distribution
     # Input:
@@ -52,11 +52,10 @@ def KF_ARMA_visualisator(a, b, n, mu = 0, sigm=0.5):
     plt.plot(list(range(n)), y)
 
     ax = plt.subplot(312)
-    sm.graphics.tsa.plot_acf(y, lags=20, ax=ax)
+    sm.graphics.tsa.plot_acf(y, lags=lags, ax=ax)
 
     ax = plt.subplot(313)
-    sm.graphics.tsa.plot_pacf(y, lags=20, ax=ax)
+    sm.graphics.tsa.plot_pacf(y, lags=lags, ax=ax)
 
     plt.tight_layout()
     plt.show()
-
