@@ -20,7 +20,7 @@ where   a - list of AR coefficients;
 # Example
 For ARMA(2,3) process you can use
 
-```KF_ARMA_visualisator([0.3, 0.6], [0.3,0.2,0.1], 200)```
+```KF_ARMA_visualisator([0.7], [-0.9], 200)```
 
 The result will be like this
 
