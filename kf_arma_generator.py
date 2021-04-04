@@ -27,7 +27,7 @@ def KF_ARMA_generator(a, b, n, mu = 0, sigm=0.5):
 
         for j,tb in enumerate(b):
             if (j+1) <= len(result):
-                y += e[i-(j+1)]*tb
+                y += e[i-(j+1)]*(-tb)
                 
         result.append(y)
 
@@ -59,3 +59,5 @@ def KF_ARMA_visualisator(a, b, n, mu = 0, sigm=0.5, lags = 20):
 
     plt.tight_layout()
     plt.show()
+
+#KF_ARMA_visualisator([0.7], [-0.9], 200)
