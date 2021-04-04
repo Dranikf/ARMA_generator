@@ -2,7 +2,7 @@
 Generation and visualisation of ARMA processes
 of the kind 
 
-y(t) = a1*y(t-1) + a2*y(t-2) + ... + am(t-m) + e(t) - b1*e(t-1) - b2*e(t-2) - ... - bq*e(t)
+y(t) = a1 y(t-1) + a2 y(t-2) + ... + am y(t-m) + e(t) - b1 e(t-1) - b2 e(t-2) - ... - bq e(t)
 
 convenient for ARMA process classification - you can see how ACF and PACF look like for the given parameters
 
